@@ -1,0 +1,123 @@
+\documentclass[14pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{cancel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	total={170mm,257mm},
+	left=20mm,
+	top=17mm,
+}
+\begin{document}
+	\title{Saptarshi's Math Notes}
+	\maketitle
+	\section{Inverse Hyperbolic Trigonometric Functions}
+	\large{Pre-requisites/Synopsis :-}
+	\begin{equation}
+		\sinh(x)=\frac{e^x-e^{-x}}{2}
+	\end{equation}
+	\begin{equation}
+		\cosh(x)=\frac{e^x+e^{-x}}{2}
+	\end{equation}
+	\begin{equation}
+		\tanh(x)=\frac{e^x-e^{-x}}{e^x+e^{-x}}
+	\end{equation}
+	Let's assume $\sinh^{-1}(x)=\ln|f(x)|$ where $f(x)$ is some function of $x$ 
+	\\ \begin{equation*}
+	\therefore \frac{e^{\ln|f(x)|}-e^{-\ln|f(x)|}}{2} = x	
+	\end{equation*}
+	\\ \begin{equation*}
+	\implies f(x)-\frac{1}{f(x)} = 2x		
+	\end{equation*}
+	\\ \begin{equation*}
+	\implies f^2(x)-2xf(x)-1 = 0		
+	\end{equation*}
+	Solving this quadratic equation, we get,
+	\begin{equation*}
+		f(x)=x\pm\sqrt{1+x^2}
+	\end{equation*}
+	If $f(x)=x-\sqrt{1+x^2}$, then $f(x)<0$ for all $x\in(-\infty,0)$
+	\\ But $f(x)$ can't be -ve since $\ln|f(x)|$ will be an complex number.
+	$\therefore f(x)=x+\sqrt{1+x^2}$
+	\begin{equation}
+		\therefore \boxed{\sinh^{-1}(x)=\ln|x+\sqrt{1+x^2}|}
+	\end{equation}
+	Similarly, we can prove,
+	\begin{equation}
+	\boxed{\cosh^{-1}(x)=\ln|x+\sqrt{x^2-1}|}
+	\end{equation}
+	Let $\tanh^{-1}(x)=\ln|f(x)|$
+	\begin{equation*}
+		\therefore \frac{e^{\ln|f(x)|}-e^{-\ln|f(x)|}}{e^{\ln|f(x)|}+e^{-\ln|f(x)|}}=x
+	\end{equation*}
+	\begin{equation*}
+	\implies \frac{f(x)-\frac{1}{f(x)}}{f(x)+\frac{1}{f(x)}}=x
+	\end{equation*}
+	Using componendo-dividendo,
+	\begin{equation*}
+	\frac{1}{f^2(x)}=\frac{1-x}{1+x}
+	\end{equation*}
+	\begin{equation*}
+	\implies f(x)=\sqrt{\frac{1+x}{1-x}}
+	\end{equation*}
+	\begin{equation}
+	\therefore \boxed{\tanh^{-1}(x)=\ln(\sqrt{\frac{1+x}{1-x}})=\frac{1}{2}\ln(\frac{1+x}{1-x})}
+	\end{equation}
+	\section{Integration Problems}
+	\begin{equation*}
+		1. \int \frac{x^2}{(x\sin x+\cos x)^2}dx
+	\end{equation*}
+	\begin{equation*}
+		=\int x \sec x \frac{x \cos x}{(x\sin x+\cos x)^2}dx
+	\end{equation*}
+	\begin{equation*}
+		=x \sec x \int \frac{x \cos x}{(x\sin x+\cos x)^2}dx + \int \frac{\sec x+x\tan x}{x\sin x+\cos x}dx
+	\end{equation*}
+	\begin{equation*}
+		=-\frac{x\sec x}{x\sin x+\cos x}+\int\frac{(\sec x+x\tan x)\times\cos^2 x}{(x\sin x+\cos x)\times\cos^2 x}dx+C_1
+	\end{equation*}
+	\begin{equation*}
+		=-\frac{x\sec x}{x\sin x+\cos x}+\int\frac{(x\sin x+\cos x)}{(x\sin x+\cos x)\cos^2(x)}dx+C_1
+	\end{equation*}
+	\begin{equation*}
+		=-\frac{x\sec x}{x\sin x+\cos x}+\int\frac{\cancel{(x\sin x+\cos x)}}{\cancel{(x\sin x+\cos x)}\cos^2(x)}dx+C_1
+	\end{equation*}
+	\begin{equation*}
+		\boxed{\tan x -\frac{x\sec x}{x\sin x+\cos x}+C}
+	\end{equation*}
+	\\ \begin{equation*}
+		2.\int \frac{dx}{\sqrt[4]{(x-1)^3(x+2)^5}}
+	\end{equation*}
+	Let $a=x-1$
+	\begin{equation*}
+		\therefore I = \int a^{\frac{-3}{4}} (a+3)^{\frac{-5}{4}}da
+	\end{equation*}
+	\begin{equation*}
+		\therefore I = \int a^{\frac{1}{4}} a^{-1} (a+3)^{\frac{-1}{4}} (a+3)^{-1}da
+	\end{equation*}
+	\begin{equation*}
+		\therefore I = \int (\frac{a}{a+3})^{\frac{1}{4}} (a^2+3a)^{-1}da
+	\end{equation*}
+	\begin{equation*}
+		\therefore I = \int e^{\frac{1}{4}\ln(\frac{a}{a+3})} (a^2+3a)^{-1}da
+	\end{equation*}
+	Let $u=\ln(\frac{a}{a+3})$
+	\\ \begin{equation*}
+		\therefore \frac{du}{da} = \frac{\cancel{a+3}}{a}\times\frac{(\cancel{a}+3)-\cancel{a}}{(a+3)^{\cancel{2}}}
+	\end{equation*}
+	\begin{equation*}
+		du = 3(a^2+3a)^{-1}da
+	\end{equation*}
+	\begin{equation*}
+		\therefore I = \frac{1}{3}\int e^{\frac{u}{4}} du
+	\end{equation*}
+	\begin{equation*}
+		\implies I = \frac{4}{3} \int e^{\frac{u}{4}} d[\frac{u}{4}] = \frac{4}{3} e^{\frac{u}{4}} + C
+	\end{equation*}
+	Plugging in the substitutions we get,
+	\begin{equation*}
+		\therefore I = \frac{4}{3} (\frac{a}{a+3})^{\frac{1}{4}} +C=\boxed{\frac{4}{3} \sqrt[4]{\frac{x-1}{x+2}} +C}
+	\end{equation*}
+\end{document}
