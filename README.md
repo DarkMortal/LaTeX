@@ -1,4 +1,4 @@
-# This repository conatins all my LaTeX scripts
+# This repository contains all my LaTeX scripts
 
 ## LaTeX, software used for typesetting technical documents. <br>
 LaTeX is a free software package created in 1985 by the American computer scientist Leslie Lamport as an addition to the TeX typesetting system. 
