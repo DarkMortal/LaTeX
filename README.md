@@ -5,3 +5,7 @@ LaTeX is a free software package created in 1985 by the American computer scient
 LaTeX was created to make it easier to produce general-purpose books and articles within TeX. 
 Because LaTeX is an extension to the TeX typesetting system, it has TeX’s ability to typeset technical documents that contain complex mathematical equations. 
 This feature made LaTeX popular with scientists and engineers.
+
+Command to compilet a .tex file to .pdf:
+
+    pdflatex Filename.tex
