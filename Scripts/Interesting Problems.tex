@@ -1,0 +1,95 @@
+\documentclass[20pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{cancel}
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	total={170mm,257mm},
+	left=20mm,
+	top=10mm,
+	%bottom=15mm,
+}
+\begin{document}
+	\begin{large}
+	\title{Some Interesting Problems}
+	\author{Saptarshi Dey}
+	\date{20 February, 2021}
+	\maketitle
+	\section{Equations with Complex Solutions}
+	\begin{equation*}
+	\sin(x)^{\sin(x)} = 2
+	\end{equation*}
+	\begin{equation*}
+	\implies \sin(x)\ln\left(\sin(x)\right) = \ln(2)
+	\end{equation*}
+	Let's assume $\sin(x) = e^a$ 
+	\begin{equation*}
+	\therefore ae^a = \ln(2)
+	\end{equation*}
+	\begin{equation*}
+	\implies a = W(\ln(2))
+	\end{equation*}
+	$W$ is the Lambert W function
+	\begin{equation*}
+	\therefore \sin(x) = e^{W(\ln(2))}
+	\end{equation*}
+	\begin{equation*}
+	\sin(x) = e^{W(0.6931)} = 1.5596 \approx 1.56
+	\end{equation*}
+	Clearly this has no real solution. But there might be a complex one:
+	\begin{equation*}
+	\sin(x)=\frac{e^{ix}-e^{-ix}}{2i} = 1.56
+	\end{equation*}
+	Let's assume $u = e^{ix}$
+	\begin{equation*}
+	\therefore u-u^{-1} = 3.12i
+	\end{equation*}
+	\begin{equation*}
+	\implies u^2-3.12iu-1 = 0
+	\end{equation*}
+	Taking $a=1, b=-3.12i, c=-1$
+	\begin{equation*}
+	\therefore u = \frac{3.12i \pm \sqrt{-9.7344+4}}{2}
+	\end{equation*}
+	\begin{equation*}
+	\therefore u = \frac{3.12i \pm 2.4i}{2} = 1.56i \pm 1.2i
+	\end{equation*}
+	\begin{equation*}
+	\therefore e^{ix} = 1.56i \pm 1.2i
+	\end{equation*}
+	\begin{equation*}
+	ix = \ln(1.56i \pm 1.2i) = \ln(i) + \ln(1.56 \pm 1.2)
+	\end{equation*}
+	We know, $i = e^{i\pi/2}$
+	\begin{equation*}
+		\therefore ix = \frac{\pi}{2}i + \ln(1.56 \pm 1.2)
+	\end{equation*}
+	\begin{equation*}
+		\implies \boxed{x = \frac{\pi}{2} - \ln(1.56 \pm 1.2)i}
+	\end{equation*}
+	\section{Feynman's Technique of Integration}
+	\subsection{Evaluate the following using Feynman's Technique}
+	1. $\displaystyle \int\limits_0^\infty e^{-x^2}\cos(5x)dx$ \\ \\
+	2. $\displaystyle \int\limits_0^1 \frac{\sin(\ln(x))}{\ln(x)}dx$
+	\subsection{Solution}
+	1. Let I$\displaystyle(\alpha) = \int\limits_0^\infty e^{-x^2}\cos(\alpha x)dx$ \\
+	$\displaystyle\implies\text{I'}(\alpha) = \int\limits_0^\infty \frac{\delta}{\delta \alpha} \left(e^{-x^2}\cos(\alpha x)\right)dx = -\int\limits_0^\infty xe^{x^2}\sin(\alpha x) \ dx$ \\
+	Integrating by parts \\
+	$\displaystyle \text{I}'(\alpha) = \left[\frac{\sin(\alpha x)}{2e^{x^2}}\right]_0^\infty - \frac{\alpha}{2}\int\limits_0^\infty e^{-x^2}\cos(\alpha x)dx \implies \text{I'}(\alpha) = 0 - \frac{\alpha}{2}\text{I}(\alpha)$ \\
+	$\displaystyle \therefore \int\frac{d\left[\text{I}(\alpha)\right]}{\text{I}(\alpha)} = \frac{-1}{2}\int \alpha \ d\alpha \implies \ln(\text{I}(\alpha)) = \frac{-\alpha^2}{4} +C' \implies \text{I}(\alpha) = Ce^{-\alpha^2/4}$ \\
+	We know that I(0) = $\displaystyle \int\limits_0^\infty e^{-x^2} dx = \frac{\sqrt{\pi}}{2}$ (The Gaussian Integral) \\
+	$\displaystyle \therefore C = \frac{\sqrt{\pi}}{2}$
+	$\displaystyle \therefore \text{I}(\alpha) = \frac{\sqrt{\pi}}{2}e^{-\alpha^2/4}$ and I(5) = $\displaystyle \boxed{\frac{\sqrt{\pi}}{2}e^{-25/4}}$ \\ \\ \\
+	2. Using the complex form of the sin function we get \\
+	$\displaystyle \int\limits_0^1 \frac{\sin(\ln(x))}{\ln(x)} \ dx = \int\limits_0^1 \frac{x^i-x^{-i}}{2i\ln(x)} \ dx$ \\
+	Let $\displaystyle \text{I}(b) = \int\limits_0^1\frac{x^{bi}-x^{-i}}{2i\ln(x)}dx$\\
+	$\therefore \displaystyle \text{I}'(b) = \int\limits_0^1 \frac{\delta}{\delta b}\left(\frac{x^{bi}-x^{-i}}{2i\ln(x)}\right)dx = \int\limits_0^1 \frac{x^{bi}\cancel{i\ln(x)}}{2\cancel{i\ln(x)}} \ dx = \frac{1}{2(1+bi)}\left[x^{1+bi}\right]_0^1 = \frac{1}{2(1+bi)}$ \\
+	$\displaystyle \therefore \text{I}(b) = \frac{1}{2}\int\frac{db}{1+bi} = \frac{1}{2i}\ln(1+bi)+C$ \\ \\ \\
+	Let $b = -1$ \\
+	$\displaystyle \therefore \text{I}(-1) = \int\limits_0^1\frac{x^{-i}-x^{-i}}{2i\ln(x)} \ dx = 0$ \\ \\
+	$\displaystyle\therefore \frac{1}{2i}\ln(1-i) + C = 0 \implies C = -\frac{1}{2i}\ln(1-i)$ \\ \\
+	$\displaystyle \therefore \text{I}(b) = \frac{\ln(1+bi)-\ln(1-i)}{2i} = \frac{1}{2i}\ln\left(\frac{1+bi}{1-i}\right)$ \\ \\
+	$\displaystyle \therefore \text{I}(1) = \frac{1}{2i}\ln\left(\frac{1+i}{1-i}\right) = \frac{1}{2i}\ln\left(e^{i\pi/2}\right) = \boxed{\frac{\pi}{4}}$
+\end{large}
+\end{document}
