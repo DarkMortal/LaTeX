@@ -10,4 +10,4 @@ Command to compilet a .tex file to .pdf:
 
     pdflatex Filename.tex
 
-## [Link to PDFs](https://drive.google.com/drive/folders/18d57aXNDF-pYoooc777_6ssEyA2UNyf5?usp=sharing)
+## [Link to PDFs](https://drive.google.com/drive/folders/1_f8wfNFavg0N-pFghoBE8XDA4orCtw4r?usp=share_link)
