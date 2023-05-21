@@ -14,7 +14,28 @@ Command to compilet a .tex file to .pdf:
 
 # Bonus Content
 
-![Integrals](https://github.com/DarkMortal/Mathematics/assets/67017303/bc742db2-2939-4eca-9531-30cb479542b1)
+<!--$$
+\displaystyle \int \frac{x}{(x^2+3)\sqrt{x^2+2}} \ dx
+$$
+
+Let $u = x^2+2 \implies du = 2 \ dx$
+
+$$
+\displaystyle \therefore \int \frac{x}{(x^2+3)\sqrt{x^2+2}} \ dx = \frac{1}{2} \int \frac{du}{u^{\frac{3}{2}}+u^{\frac{1}{2}}} 
+$$
+
+Let $\sqrt{u} = t \implies du = 2t \ dt$
+
+$$
+\displaystyle \therefore \frac{1}{2} \int \frac{du}{u^{\frac{3}{2}}+u^{\frac{1}{2}}} = \frac{1}{\cancel{2}} \int \frac{\cancel{2}t}{t^3+t} \ dt = \int \frac{1}{1+t^2} \ dt = \arctan(t)+C
+$$
+
+Plugging in previous substitutions we get
+
+$$
+\displaystyle \int \frac{x}{(x^2+3)\sqrt{x^2+2}} \ dx = \boxed{\arctan(\sqrt{x^2+2})+C}
+$$-->
+![integral1](https://github.com/DarkMortal/Mathematics/assets/67017303/1a91df6d-3ed6-4944-8ee0-6a447749ba48)
 
 ## Some common Integrals
 
