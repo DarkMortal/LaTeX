@@ -11,3 +11,11 @@ Command to compilet a .tex file to .pdf:
     pdflatex Filename.tex
 
 ## [Link to PDFs](https://drive.google.com/drive/folders/1_f8wfNFavg0N-pFghoBE8XDA4orCtw4r?usp=share_link)
+
+# Bonus Content
+
+![Integrals](https://github.com/DarkMortal/Mathematics/assets/67017303/bc742db2-2939-4eca-9531-30cb479542b1)
+
+## Some common Integrals
+
+![Integrals](https://github.com/DarkMortal/Mathematics/assets/67017303/6f105117-47a7-4c0f-a0fa-0f7d7aaf9ae2)
