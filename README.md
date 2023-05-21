@@ -35,7 +35,7 @@ Plugging in previous substitutions we get
 $$
 \displaystyle \int \frac{x}{(x^2+3)\sqrt{x^2+2}} \ dx = \boxed{\arctan(\sqrt{x^2+2})+C}
 $$-->
-![integral1](https://github.com/DarkMortal/Mathematics/assets/67017303/1a91df6d-3ed6-4944-8ee0-6a447749ba48)
+![integral1](https://github.com/DarkMortal/Mathematics/assets/67017303/aadb6f4f-7bae-4a4b-aa5d-a5594509d5d8)
 
 ## Some common Integrals
 
