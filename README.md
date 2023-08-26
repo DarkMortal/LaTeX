@@ -13,13 +13,11 @@ Command to compilet a .tex file to .pdf:
 ## [Link to PDFs](https://drive.google.com/drive/folders/1_f8wfNFavg0N-pFghoBE8XDA4orCtw4r?usp=share_link)
 
 # Bonus Content
-
 <!--$$
 \displaystyle \int \frac{x}{(x^2+3)\sqrt{x^2+2}} \ dx
 $$
 
 Let $u = x^2+2 \implies du = 2 \ dx$
-
 $$
 \displaystyle \therefore \int \frac{x}{(x^2+3)\sqrt{x^2+2}} \ dx = \frac{1}{2} \int \frac{du}{u^{\frac{3}{2}}+u^{\frac{1}{2}}} 
 $$
@@ -34,9 +32,9 @@ Plugging in previous substitutions we get
 
 $$
 \displaystyle \int \frac{x}{(x^2+3)\sqrt{x^2+2}} \ dx = \boxed{\arctan(\sqrt{x^2+2})+C}
+
 $$-->
-![integral1](https://github.com/DarkMortal/Mathematics/assets/67017303/aadb6f4f-7bae-4a4b-aa5d-a5594509d5d8)
+![Integral0](https://github.com/DarkMortal/Mathematics/assets/67017303/803d5705-6b3d-4e07-aa8e-d3d914bc534a)
 
 ## Some common Integrals
-
-![Integrals](https://github.com/DarkMortal/Mathematics/assets/67017303/6f105117-47a7-4c0f-a0fa-0f7d7aaf9ae2)
+![Integrals](https://github.com/DarkMortal/DarkMortal/assets/67017303/ec7fdb17-0f0b-4a5a-be29-8718261a0885)
