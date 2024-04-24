@@ -74,7 +74,7 @@
 	2. $\displaystyle \int\limits_0^1 \frac{\sin(\ln(x))}{\ln(x)}dx$
 	\subsection{Solution}
 	1. Let I$\displaystyle(\alpha) = \int\limits_0^\infty e^{-x^2}\cos(\alpha x)dx$ \\
-	$\displaystyle\implies\text{I'}(\alpha) = \int\limits_0^\infty \frac{\delta}{\delta \alpha} \left(e^{-x^2}\cos(\alpha x)\right)dx = -\int\limits_0^\infty xe^{x^2}\sin(\alpha x) \ dx$ \\
+	$\displaystyle\implies\text{I'}(\alpha) = \int\limits_0^\infty \frac{\delta}{\delta \alpha} \left(e^{-x^2}\cos(\alpha x)\right)dx = -\int\limits_0^\infty xe^{-x^2}\sin(\alpha x) \ dx$ \\
 	Integrating by parts \\
 	$\displaystyle \text{I}'(\alpha) = \left[\frac{\sin(\alpha x)}{2e^{x^2}}\right]_0^\infty - \frac{\alpha}{2}\int\limits_0^\infty e^{-x^2}\cos(\alpha x)dx \implies \text{I'}(\alpha) = 0 - \frac{\alpha}{2}\text{I}(\alpha)$ \\
 	$\displaystyle \therefore \int\frac{d\left[\text{I}(\alpha)\right]}{\text{I}(\alpha)} = \frac{-1}{2}\int \alpha \ d\alpha \implies \ln(\text{I}(\alpha)) = \frac{-\alpha^2}{4} +C' \implies \text{I}(\alpha) = Ce^{-\alpha^2/4}$ \\
